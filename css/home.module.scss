@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: auto auto;
     grid-column-gap: 5rem;
-    padding-top: 15rem;
+    padding-top: calc(5rem + 10vh);
 
     justify-items: center;
     align-items: center;
