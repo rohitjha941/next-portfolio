@@ -1,9 +1,13 @@
+@import "./variables.scss";
+
 .body {
-    background: #191919;
+    background: $background;
     padding-left: 12.5rem;
     padding-right: 12.5rem;
 }
 
 .html {
     font-size: calc(8px + 0.390625vw);
+    --scroll-behavior: smooth !important;
+    scroll-behavior: smooth !important;
 }

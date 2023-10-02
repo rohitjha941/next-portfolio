@@ -1,0 +1,36 @@
+@import "./variables.scss";
+
+.wrapper {
+    margin-top: 25rem;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.card {
+    text-align: center;
+    width: 7.5rem;
+    margin-top: 9rem;
+
+    display: grid;
+    align-items: center;
+    justify-items: center;
+
+    img {
+        display: block;
+        width: 7.5rem;
+    }
+
+    .title {
+        text-align: center;
+        font-family: "Poppins", sans-serif;
+        margin-top: 2rem;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 1.625rem;
+        color: $white2;
+    }
+}

@@ -5,9 +5,8 @@
     grid-template-columns: auto auto;
     grid-column-gap: 5rem;
     padding-top: calc(5rem + 10vh);
-
     justify-items: center;
-    align-items: center;
+    // min-height: 100vh;
 }
 
 .text {
