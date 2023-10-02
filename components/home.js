@@ -1,7 +1,9 @@
 import styles from '../css/home.module.scss';
 import Rohit from "../assests/rohit.png"
 import Image from 'next/image'
-import Resume from "../constants/links"
+import Link from 'next/link'
+
+import { Resume } from "../constants/links"
 
 export default function Home() {
     return (
@@ -14,7 +16,7 @@ export default function Home() {
 
                 <br />
                 <br />
-                <a href={Resume} className={styles.resume}> View Resume</a>
+                <Link href={Resume} className={styles.resume} target='_blank'> View Resume</Link>
             </div>
 
             <div className={styles.container}>
