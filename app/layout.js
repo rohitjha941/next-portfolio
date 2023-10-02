@@ -19,8 +19,10 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href={inter.url} />
       </head>
-      <Navbar />
-      <body className={styles.body}>{children}</body>
+      <body className={styles.body}>
+        <Navbar />
+        {children}
+      </body>
     </html>
   )
 }
