@@ -1,3 +1,5 @@
+@import "./variables.scss";
+
 .nav {
     display: flex;
     justify-content: space-between;
@@ -10,7 +12,7 @@
 }
 
 .name {
-    color: #c3c3c3;
+    color: $white;
     font-family: 'Forum', cursive;
     font-size: 2.8125rem;
     font-style: normal;
@@ -19,7 +21,7 @@
 }
 
 .link {
-    color: #c3c3c3;
+    color: $white;
     font-family: 'DM Sans', sans-serif;
     font-size: 1.25rem;
     font-style: normal;
