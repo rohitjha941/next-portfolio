@@ -1,0 +1,12 @@
+@import "./common/fonts.scss";
+@import "./common/reset.scss";
+@import "./common/index.scss";
+
+html,
+body {
+  font-size: 0.83vw;
+}
+
+body {
+  background-color: $backgroundColor;
+}

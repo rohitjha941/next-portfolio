@@ -1,0 +1,37 @@
+@import "../common/index";
+
+.home {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 50% 27%;
+  grid-column-gap: 15%;
+  padding: 5% calc($leftRightPadding + 10%);
+}
+
+.home_name {
+  color: $white;
+  font-size: 3.625rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120.69%;
+  letter-spacing: -0.0625rem;
+}
+
+.name {
+  background: linear-gradient(90deg, #13b0f5 -2.06%, #e70faa 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 3.625rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 4.375rem;
+  letter-spacing: -0.0625rem;
+}
+
+.self_image {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  border: 9px solid #e70faa;
+}
