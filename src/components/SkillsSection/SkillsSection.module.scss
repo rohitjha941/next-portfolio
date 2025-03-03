@@ -64,10 +64,29 @@
     color: #ffffff;
     transition: all 0.3s ease;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    position: relative;
 
     &:hover {
-        background: linear-gradient(45deg, #00ff87, #60efff);
-        color: #1a1a1a;
+        border-color: transparent;
+        background: rgba(255, 255, 255, 0.05);
+        
+        &::before {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            border-radius: 4px;
+            padding: 1px;
+            background: linear-gradient(45deg, #00ff87, #60efff);
+            -webkit-mask: 
+                linear-gradient(#fff 0 0) content-box, 
+                linear-gradient(#fff 0 0);
+            mask: 
+                linear-gradient(#fff 0 0) content-box, 
+                linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+        }
     }
 }
 

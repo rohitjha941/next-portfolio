@@ -13,7 +13,7 @@ function HomeHero() {
                         <span className={styles.name}>Rohit Jha</span>
                     </h1>
                     <p className={styles.tagline}>
-                        I develop scalable web applications
+                        DevOps & Backend Engineer crafting scalable solutions
                     </p>
                 </div>
 
