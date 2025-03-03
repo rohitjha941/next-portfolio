@@ -2,7 +2,7 @@
 
 .nav {
   display: flex;
-  padding: 1rem $leftRightPadding;
+  padding: 1rem max(1.5rem, calc($leftRightPadding + 2%));
   justify-content: space-between;
   align-items: center;
   color: $white;
@@ -10,6 +10,7 @@
   position: sticky;
   top: 0;
   z-index: 1000;
+  background: $backgroundColor;
 
   @media (max-width: 768px) {
     padding: 1rem;
@@ -21,7 +22,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 1440px;
+    max-width: 1200px;
     margin: 0 auto;
   }
 }
