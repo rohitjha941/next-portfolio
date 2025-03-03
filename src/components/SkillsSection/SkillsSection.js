@@ -30,7 +30,7 @@ function SkillsSection() {
     };
 
     return (
-        <section className={styles.skills_section} id="skills">
+        <section className= {`${styles.skills_section} section`}  id="skills">
             <div className={styles.skills_cont}>
             <Heading>Skills</Heading>
             <div className={styles.skills_container}>

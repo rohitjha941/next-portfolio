@@ -4,7 +4,7 @@ import Rohit from '@/static/self/rohit.webp';
 
 function HomeHero() {
     return (
-        <div className={styles.home}>
+        <section className={`${styles.home} section`}>
             <div className={styles.home_container}>
                 <div className={styles.home_content}>
                     <h1 className={styles.home_name}>
@@ -26,7 +26,7 @@ function HomeHero() {
                     height={400}
                 />
             </div>
-        </div>
+        </section>
     );
 }
 

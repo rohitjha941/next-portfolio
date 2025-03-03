@@ -41,7 +41,7 @@ function Navbar() {
               href={`mailto:${Email}`}
               aria-label="Email me"
             >
-              <UilEnvelope size="27.5" aria-hidden="true" />
+              <UilEnvelope size={27.5} color="currentColor" aria-hidden="true" />
             </Link>
             <Link 
               className={styles.nav_icons} 
@@ -50,7 +50,7 @@ function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <UilLinkedin size="27.5" aria-hidden="true" />
+              <UilLinkedin size={27.5} color="currentColor" aria-hidden="true" />
             </Link>
             <Link 
               className={styles.nav_icons} 
@@ -59,7 +59,7 @@ function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <UilGithub size="27.5" aria-hidden="true" />
+              <UilGithub size={27.5} color="currentColor" aria-hidden="true" />
             </Link>
           </div>
         </div>
