@@ -1,0 +1,93 @@
+@import "../../styles/common/index.scss";
+
+.nav {
+  display: flex;
+  padding: 1rem 0;
+  justify-content: space-between;
+  align-items: center;
+  color: $white;
+  transition: var(--transition-speed) ease all;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: $backgroundColor;
+
+  @media (max-width: 768px) {
+    padding: 0.5rem 0;
+    height: 64px;
+  }
+}
+
+.nav_container {
+  @extend %container;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav_brand {
+  font-weight: 500;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  cursor: pointer;
+  text-decoration: none;
+  color: $white;
+  transition: color var(--transition-speed) ease;
+
+  &:hover {
+    color: $primaryColor;
+  }
+}
+
+.nav_brand_active {
+  @extend .nav_brand;
+  color: $primaryColor;
+}
+
+.nav_margin {
+  margin: 0 0 0 2.5em;
+}
+
+.nav_array {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav_items {
+  color: $white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 400;
+  transition: color var(--transition-speed) ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    color: $primaryColor;
+  }
+}
+
+.nav_icons {
+  color: $white;
+  transition: color var(--transition-speed) ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+
+  &:hover {
+    color: $primaryColor;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav_array {
+    gap: 1rem;
+  }
+
+  .nav_items {
+    font-size: 0.9rem;
+  }
+}

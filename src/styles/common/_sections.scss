@@ -1,0 +1,28 @@
+.section {
+  padding: 4rem 0 0 0;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+
+ 
+  @media (max-width: 768px) {
+    padding: 4rem 0;
+  }
+}
+
+// Add specific section spacing
+#about {
+  margin-top: 2rem;
+}
+
+#skills {
+  margin-top: 2rem;
+}
+
+#projects {
+  margin-top: 2rem;
+}
+
+#contact {
+  margin-top: 2rem;
+} 

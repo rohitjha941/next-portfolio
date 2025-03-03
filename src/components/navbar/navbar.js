@@ -1,7 +1,7 @@
 'use client';
 
 import Link from "next/link";
-import styles from './header.module.scss';
+import styles from './navbar.module.scss';
 
 import { LinkedIn, Email, GitHub } from '@/constants';
 import { UilEnvelope, UilLinkedin, UilGithub } from '@iconscout/react-unicons';
@@ -17,7 +17,7 @@ function Navbar() {
 
   return (
     <header className={styles.nav}>
-      <nav>
+      <div className={styles.nav_container}>
         <Link
           href="/"
           className={styles.nav_brand}
@@ -41,7 +41,7 @@ function Navbar() {
               href={`mailto:${Email}`}
               aria-label="Email me"
             >
-              <UilEnvelope size="27.5" aria-hidden="true" />
+              <UilEnvelope size={27.5} color="currentColor" aria-hidden="true" />
             </Link>
             <Link 
               className={styles.nav_icons} 
@@ -50,7 +50,7 @@ function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <UilLinkedin size="27.5" aria-hidden="true" />
+              <UilLinkedin size={27.5} color="currentColor" aria-hidden="true" />
             </Link>
             <Link 
               className={styles.nav_icons} 
@@ -59,11 +59,11 @@ function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <UilGithub size="27.5" aria-hidden="true" />
+              <UilGithub size={27.5} color="currentColor" aria-hidden="true" />
             </Link>
           </div>
         </div>
-      </nav>
+      </div>
     </header>
   );
 }
