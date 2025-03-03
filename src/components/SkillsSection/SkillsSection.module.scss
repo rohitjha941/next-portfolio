@@ -2,15 +2,8 @@
 
 .skills_section {
     color: #ffffff;
-}
-
-.skills_container {
     @extend %container;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
 }
-
 .skill_category {
     background: rgba(255, 255, 255, 0.05);
     padding: 1.2rem;
