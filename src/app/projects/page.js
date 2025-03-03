@@ -46,6 +46,42 @@ export default function Projects() {
       "link": "https://esummit.in/",
       "codeLink": null,
       "tags": ["Entrepreneurship", "Event Website"]
+    },
+    {
+      "image": Esummit,
+      "alt": "E-Summit Website",
+      "title": "E-Summit Website",
+      "description": "E-Summit IIT Roorkee brings a platform to celebrate the history and the spirit of entrepreneurship; and to inspire the leaders and roblem solvers of today and tomorrow. This 2-day extravaganza will see students and budding enthusiasts on a common stage.",
+      "link": "https://esummit.in/",
+      "codeLink": null,
+      "tags": ["Entrepreneurship", "Event Website"]
+    },
+    {
+      "image": Esummit,
+      "alt": "E-Summit Website",
+      "title": "E-Summit Website",
+      "description": "E-Summit IIT Roorkee brings a platform to celebrate the history and the spirit of entrepreneurship; and to inspire the leaders and roblem solvers of today and tomorrow. This 2-day extravaganza will see students and budding enthusiasts on a common stage.",
+      "link": "https://esummit.in/",
+      "codeLink": null,
+      "tags": ["Entrepreneurship", "Event Website"]
+    },
+    {
+      "image": Esummit,
+      "alt": "E-Summit Website",
+      "title": "E-Summit Website",
+      "description": "E-Summit IIT Roorkee brings a platform to celebrate the history and the spirit of entrepreneurship; and to inspire the leaders and roblem solvers of today and tomorrow. This 2-day extravaganza will see students and budding enthusiasts on a common stage.",
+      "link": "https://esummit.in/",
+      "codeLink": null,
+      "tags": ["Entrepreneurship", "Event Website"]
+    },
+    {
+      "image": Esummit,
+      "alt": "E-Summit Website",
+      "title": "E-Summit Website",
+      "description": "E-Summit IIT Roorkee brings a platform to celebrate the history and the spirit of entrepreneurship; and to inspire the leaders and roblem solvers of today and tomorrow. This 2-day extravaganza will see students and budding enthusiasts on a common stage.",
+      "link": "https://esummit.in/",
+      "codeLink": null,
+      "tags": ["Entrepreneurship", "Event Website"]
     }
   ];
 
