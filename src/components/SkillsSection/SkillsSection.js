@@ -1,5 +1,8 @@
+'use client';
+
 import styles from './SkillsSection.module.scss';
 import Heading from '../ui/Heading';
+import { motion } from 'framer-motion';
 
 function SkillsSection() {
     const skills = {
@@ -29,24 +32,62 @@ function SkillsSection() {
         }
     };
 
+    const containerVariants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: { 
+            opacity: 1, 
+            y: 0,
+            transition: {
+                duration: 0.8,
+                ease: "easeOut",
+                staggerChildren: 0.2
+            }
+        }
+    };
+
+    const itemVariants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: { 
+            opacity: 1, 
+            y: 0,
+            transition: {
+                duration: 0.6,
+                ease: "easeOut"
+            }
+        }
+    };
+
     return (
         <section className={`${styles.skills_section} section`} id="skills">
             <div className={styles.skills_container}>
                 <Heading>Skills</Heading>
-                <div className={styles.skills_grid}>
+                <motion.div 
+                    className={styles.skills_grid}
+                    variants={containerVariants}
+                    initial="hidden"
+                    animate="visible"
+                >
                     {Object.values(skills).map((category, index) => (
-                        <div key={index} className={styles.skill_category}>
+                        <motion.div 
+                            key={index} 
+                            className={styles.skill_category}
+                            variants={itemVariants}
+                        >
                             <h3 className={styles.category_title}>{category.title}</h3>
                             <div className={styles.skills_list}>
                                 {category.items.map((skill, skillIndex) => (
-                                    <div key={skillIndex} className={styles.skill_item}>
+                                    <motion.div 
+                                        key={skillIndex} 
+                                        className={styles.skill_item}
+                                        variants={itemVariants}
+                                    >
                                         {skill}
-                                    </div>
+                                    </motion.div>
                                 ))}
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
-                </div>
+                </motion.div>
             </div>
         </section>
     );
