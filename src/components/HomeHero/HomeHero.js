@@ -1,6 +1,6 @@
 import styles from './HomeHero.module.scss';
 import Image from 'next/image';
-import Rohit from '@/static/self/rohit.png';
+import Rohit from '@/static/self/rohit.webp';
 
 function HomeHero() {
     return (
