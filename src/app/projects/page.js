@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "@/styles/pages/projects.module.scss";
+import styles from "./projects.module.scss";
 import Rethink from "@/static/projects/rethink.png";
 import Esummit from "@/static/projects/esummit.png";
 import Radio from "@/static/projects/radio.png";
@@ -20,7 +20,7 @@ export default function Projects() {
       "image": Radio,
       "alt": "College Radio",
       "title": "College Radio",
-      "description": "College Radio allows simultaneous live viewing of videos in real-time, akin to facebook’s watch party. It also allows real-time changes in track and queues. Synchronization is achieved using WebSockets.",
+      "description": "College Radio allows simultaneous live viewing of videos in real-time, akin to facebook's watch party. It also allows real-time changes in track and queues. Synchronization is achieved using WebSockets.",
       "link": null,
       "codeLink": "https://github.com/rohitjha941/radio"
     },
