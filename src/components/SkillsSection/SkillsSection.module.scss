@@ -1,31 +1,80 @@
 @import "../../styles/common/index";
 
 .skills_section {
-    width: 100%;
-    max-width: 1200px;
-    margin: 4rem auto 2rem;
-    padding: 0 max(1.5rem, calc($leftRightPadding + 2%));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    color: #ffffff;
+}
+
+.skill_category {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.2rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.08);
+    }
+
+    margin-bottom: 1.5rem;    
+}
+
+.category_title {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    font-weight: 600;
     position: relative;
-    animation: fadeIn 1s ease-out;
-    
-    @media (max-width: 768px) {
-        padding: 0 1rem;
-        margin: 3rem auto 1.5rem;
+    padding-bottom: 0.5rem;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 40px;
+        height: 2px;
+        background: linear-gradient(45deg, #00ff87, #60efff);
+        border-radius: 2px;
     }
 }
 
-.skills_container {
-    margin-top: 1.5rem;
-    animation: fadeInUp 0.8s ease-out;
+.skills_grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
 }
 
-.skills_wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
+.skill_item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.4rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    color: #ffffff;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 
-    @media (max-width: 768px) {
+    &:hover {
+        background: linear-gradient(45deg, #00ff87, #60efff);
+        color: #1a1a1a;
+    }
+}
+
+@media (max-width: 768px) {
+    .skills_section {
+        padding: 2rem 1rem;
+    }
+
+    .skills_container {
         grid-template-columns: 1fr;
+    }
+
+    .skill_item {
+        padding: 0.3rem 0.5rem;
+        font-size: 0.8rem;
     }
 }
 

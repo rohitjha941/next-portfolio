@@ -2,33 +2,53 @@ import styles from './SkillsSection.module.scss';
 import Heading from '../ui/Heading';
 
 function SkillsSection() {
+    const skills = {
+        devops: {
+            title: 'DevOps',
+            items: [
+                'AWS', 'GCP', 'Docker', 'CI/CD', 'Git',
+                'Infrastructure as Code', 'Terraform', 'Kubernetes',
+                'ECS', 'Nginx', 'Prometheus', 'Thanos', 'Grafana'
+            ]
+        },
+        backend: {
+            title: 'Backend',
+            items: [
+                'Golang', 'Python', 'Django', 'SQL',
+                'Micro Service Architecture', 'Event-Based Architecture',
+                'REST APIs', 'GraphQL'
+            ]
+        },
+        tools: {
+            title: 'Tools & Technologies',
+            items: [
+                'GitHub Actions', 'Helm Charts', 'PostgreSQL',
+                'OpenSearch', 'Redis', 'Elasticache',
+                'Fluentd', 'GitLab', 'SQS', 'Lambda'
+            ]
+        }
+    };
+
     return (
-        <div className={styles.skills_section}>
+        <section className={styles.skills_section} id="skills">
+            <div className={styles.skills_cont}>
             <Heading>Skills</Heading>
             <div className={styles.skills_container}>
-                <div className={styles.skills_wrapper}>
-                    <div className={styles.skills_category}>
-                        <span className={styles.category_label}>Languages:</span>
-                        <span className={styles.skills_list}>Python, Go</span>
+                {Object.values(skills).map((category, index) => (
+                    <div key={index} className={styles.skill_category}>
+                        <h3 className={styles.category_title}>{category.title}</h3>
+                        <div className={styles.skills_grid}>
+                            {category.items.map((skill, skillIndex) => (
+                                <div key={skillIndex} className={styles.skill_item}>
+                                    {skill}
+                                </div>
+                            ))}
+                        </div>
                     </div>
-                    
-                    <div className={styles.skills_category}>
-                        <span className={styles.category_label}>BackEnd:</span>
-                        <span className={styles.skills_list}>Django, Django Rest, Flask, FastAPI, Golang</span>
-                    </div>
-                    
-                    <div className={styles.skills_category}>
-                        <span className={styles.category_label}>DevOps:</span>
-                        <span className={styles.skills_list}>Infrastructure as a Code, Terraform, GitLab - CI, AWS, Kubernetes</span>
-                    </div>
-                    
-                    <div className={styles.skills_category}>
-                        <span className={styles.category_label}>Databases:</span>
-                        <span className={styles.skills_list}>MySQL, Postgresql, Dynamodb</span>
-                    </div>
-                </div>
+                ))}
             </div>
-        </div>
+            </div>
+        </section>
     );
 }
 
