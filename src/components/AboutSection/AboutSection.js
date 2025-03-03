@@ -3,7 +3,7 @@ import Heading from '../ui/Heading';
 
 function AboutSection() {
     return (
-        <div className={styles.about_section}>
+        <div className={styles.about_section} id="about">
             <Heading>About Me</Heading>
             <div className={styles.about_container}>
                 <p className={styles.about_content}>

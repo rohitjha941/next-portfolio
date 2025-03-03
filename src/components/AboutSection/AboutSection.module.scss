@@ -23,6 +23,7 @@
 .about_container {
     margin-top: 1.5rem;
     animation: fadeInUp 0.8s ease-out;
+    width: 100%;
 }
 
 .about_content {
@@ -34,7 +35,7 @@
     padding-left: 1rem;
     border-left: 2px solid rgba(255, 255, 255, 0.1);
     transition: border-left-color var(--transition-speed) ease;
-    max-width: 800px;
+    width: 100%;
     margin-bottom: 2.5rem;
 
     &:hover {

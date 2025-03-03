@@ -1,3 +1,5 @@
+'use client';
+
 import Link from "next/link";
 import styles from './header.module.scss';
 
@@ -5,6 +7,14 @@ import { LinkedIn, Email, GitHub } from '@/constants';
 import { UilEnvelope, UilLinkedin, UilGithub } from '@iconscout/react-unicons';
 
 function Navbar() {
+  const scrollToSection = (e, sectionId) => {
+    e.preventDefault();
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <header className={styles.nav}>
       <nav>
@@ -17,12 +27,13 @@ function Navbar() {
         </Link>
         
         <div className={styles.nav_array}>
-          <Link
-            href="/about"
+          <a
+            href="#about"
             className={styles.nav_items}
+            onClick={(e) => scrollToSection(e, 'about')}
           >
             About
-          </Link>
+          </a>
 
           <div className={styles.nav_items}>
             <Link 
