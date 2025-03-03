@@ -1,9 +1,9 @@
 'use client';
 
 import styles from './Footer.module.scss';
-import { UilEnvelope, UilLinkedin, UilGithub } from '@iconscout/react-unicons';
 import { LinkedIn, Email, GitHub } from '@/constants';
 import Link from 'next/link';
+import { IconEnvelope, IconLinkedin, IconGithub } from '@/components/icons';
 
 function Footer() {
     const currentYear = new Date().getFullYear();
@@ -20,7 +20,7 @@ function Footer() {
                         className={styles.social_icon}
                         aria-label="Email me"
                     >
-                        <UilEnvelope size="20" aria-hidden="true" />
+                        <IconEnvelope aria-hidden="true" />
                     </Link>
                     <Link 
                         href={LinkedIn}
@@ -29,7 +29,7 @@ function Footer() {
                         rel="noopener noreferrer"
                         aria-label="Visit my LinkedIn profile"
                     >
-                        <UilLinkedin size="20" aria-hidden="true" />
+                        <IconLinkedin aria-hidden="true" />
                     </Link>
                     <Link 
                         href={GitHub}
@@ -38,7 +38,7 @@ function Footer() {
                         rel="noopener noreferrer"
                         aria-label="Visit my GitHub profile"
                     >
-                        <UilGithub size="20" aria-hidden="true" />
+                        <IconGithub aria-hidden="true" />
                     </Link>
                 </div>
             </div>
