@@ -1,10 +1,8 @@
 @import "../../styles/common/index";
 
 .home {
-    min-height: 100vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
     color: #ffffff;
 }
 
@@ -24,63 +22,25 @@
 }
 
 .home_name {
-    color: $white;
+    color: #ffffff;
     font-size: clamp(2rem, 5vw, 3.2rem);
-    font-style: normal;
     font-weight: 700;
     line-height: 1.2;
-    letter-spacing: -0.0625rem;
     margin: 0;
-    animation: fadeInUp 0.8s ease-out;
 }
 
 .name {
-    background: var(--gradient-primary);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #ffffff;
     font-size: clamp(2rem, 5vw, 3.2rem);
-    font-style: normal;
     font-weight: 700;
     line-height: 1.2;
-    letter-spacing: -0.0625rem;
-    transition: transform var(--transition-speed) ease;
-    display: inline-block;
-    position: relative;
-
-    &:hover {
-        transform: scale(1.05);
-    }
-
-    &::after {
-        content: '';
-        position: absolute;
-        bottom: -0.5rem;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        background: var(--gradient-primary);
-        transform: scaleX(0);
-        transition: transform var(--transition-speed) ease;
-        transform-origin: right;
-    }
-
-    &:hover::after {
-        transform: scaleX(1);
-        transform-origin: left;
-    }
 }
 
 .tagline {
     font-size: clamp(1.2rem, 3vw, 1.4rem);
-    color: $white;
+    color: #ffffff;
     font-weight: 500;
     opacity: 0.95;
-    animation: fadeInUp 0.8s ease-out 0.2s backwards;
-    background: linear-gradient(90deg, $white 0%, rgba(255, 255, 255, 0.8) 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 .self_image {
@@ -89,24 +49,6 @@
     aspect-ratio: 1;
     border-radius: 16px;
     align-self: center;
-    animation: fadeIn 1s ease-out;
-    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1),
-               0 8px 20px rgba(0, 0, 0, 0.3);
-    filter: brightness(0.95) contrast(1.05);
-    position: relative;
-
-    &::after {
-        content: '';
-        position: absolute;
-        inset: 0;
-        border-radius: 16px;
-        background: linear-gradient(
-            135deg,
-            rgba(19, 176, 245, 0.05),
-            rgba(231, 15, 170, 0.05)
-        );
-        pointer-events: none;
-    }
 }
 
 @media (max-width: 768px) {
@@ -119,25 +61,5 @@
 
     .self_image {
         width: min(80%, 250px);
-    }
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
     }
 } 
