@@ -8,7 +8,7 @@ function AboutSection() {
             <div className={styles.about_container}>
                 <div className={styles.about_content}>
                     <p>
-                        I'm a Software Developer with expertise in DevOps and Backend Engineering.
+                        I&apos;m a Software Developer with expertise in DevOps and Backend Engineering.
                     </p>
                     
                     <p>
