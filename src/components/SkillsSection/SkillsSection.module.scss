@@ -2,8 +2,21 @@
 
 .skills_section {
     color: #ffffff;
-    @extend %container;
 }
+
+.skills_container {
+    @extend %container;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.skills_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
 .skill_category {
     background: rgba(255, 255, 255, 0.05);
     padding: 1.2rem;
@@ -37,7 +50,7 @@
     }
 }
 
-.skills_grid {
+.skills_list {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
@@ -59,7 +72,7 @@
 }
 
 @media (max-width: 768px) {
-    .skills_container {
+    .skills_grid {
         grid-template-columns: 1fr;
     }
 
@@ -67,37 +80,6 @@
         padding: 0.3rem 0.5rem;
         font-size: 0.8rem;
     }
-}
-
-.skills_category {
-    display: flex;
-    align-items: baseline;
-    gap: 0.75rem;
-    padding: 0.75rem 1rem;
-    transition: transform var(--transition-speed) ease;
-    background: rgba(255, 255, 255, 0.02);
-    border-radius: 6px;
-    border-left: 2px solid transparent;
-
-    &:hover {
-        transform: translateX(5px);
-        background: rgba(255, 255, 255, 0.04);
-        border-left-color: $primaryColor;
-    }
-}
-
-.category_label {
-    color: $primaryColor;
-    font-size: 1.1rem;
-    font-weight: 600;
-    white-space: nowrap;
-}
-
-.skills_list {
-    color: $white;
-    opacity: 0.9;
-    font-size: 1rem;
-    line-height: 1.5;
 }
 
 @keyframes fadeInUp {
