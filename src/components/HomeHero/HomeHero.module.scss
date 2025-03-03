@@ -85,12 +85,36 @@
   }
 }
 
+.description {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
 .tagline {
-  font-size: clamp(1.1rem, 3vw, 1.3rem);
+  font-size: clamp(1.2rem, 3vw, 1.4rem);
   color: $white;
-  margin-top: 1rem;
-  opacity: 0.9;
+  font-weight: 500;
+  opacity: 0.95;
   animation: fadeInUp 0.8s ease-out 0.2s backwards;
+  background: linear-gradient(90deg, $white 0%, rgba(255, 255, 255, 0.8) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bio {
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  color: $white;
+  opacity: 0.8;
+  line-height: 1.6;
+  max-width: 500px;
+  animation: fadeInUp 0.8s ease-out 0.4s backwards;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
 }
 
 .self_image {

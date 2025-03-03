@@ -6,9 +6,22 @@ function AboutSection() {
         <div className={styles.about_section} id="about">
             <Heading>About Me</Heading>
             <div className={styles.about_container}>
-                <p className={styles.about_content}>
-                    I&apos;m a developer who&apos;s really wants to learn new things. I&apos;ve got experience building backend applications and cloud systems. I can picking up new skills in no time and always want to be part of cool, innovative projects.
-                </p>
+                <div className={styles.about_content}>
+                    <p>
+                        I'm a Software Developer with expertise in DevOps and Backend Engineering.
+                    </p>
+                    
+                    <p>
+                        Currently working as a Software Engineer at ThriveMarket, I specialize in cloud infrastructure 
+                        and distributed systems. My experience spans across AWS infrastructure management, 
+                        Kubernetes orchestration, and building high-performance backend services.
+                    </p>
+
+                    <p>
+                        I have been implementing infrastructure as code using Terraform and optimizing 
+                        application performance.
+                    </p>
+                </div>
             </div>
         </div>
     );
