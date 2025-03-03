@@ -1,22 +1,15 @@
-import styles from '../styles/pages/home.module.scss';
-import Image from 'next/image';
+import HomeHero from '@/components/HomeHero/HomeHero';
+import AboutSection from '@/components/AboutSection/AboutSection';
+import SkillsSection from '@/components/SkillsSection/SkillsSection';
+import Footer from '@/components/Footer/Footer';
 
-import Rohit from '@/static/self/rohit.png';
-
-function Home() {
+export default function Home() {
     return (
-        <div className={styles.home}>
-            <div className={styles.home_name}>
-                Hi 👋, <br />
-                My name is <br />
-                <div className={styles.name}>Rohit Jha</div>
-                I develop scalable web applications
-            </div>
-
-            <Image src={Rohit} alt="Rohit" className={styles.self_image} />
+        <div>
+            <HomeHero />
+            <AboutSection />
+            <SkillsSection />
+            <Footer />
         </div>
-
     );
 }
-
-export default Home;

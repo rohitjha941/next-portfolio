@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "@/styles/pages/about.module.scss";
+import styles from "./about.module.scss";
 import Heading from "@/components/heading/heading";
 import { LinkedIn, Email, GitHub } from '@/constants';
 import Link from "next/link";

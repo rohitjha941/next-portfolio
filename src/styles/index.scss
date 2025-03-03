@@ -1,10 +1,26 @@
 @import "./common/fonts.scss";
 @import "./common/reset.scss";
 @import "./common/index.scss";
+@import "./common/accessibility";
+
+:root {
+  --gradient-primary: linear-gradient(90deg, #13b0f5 -2.06%, #e70faa 100%);
+  --transition-speed: 0.3s;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 
 html,
 body {
   font-size: 0.83vw;
+  margin: 0;
+  padding: 0;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
 }
 
 body {

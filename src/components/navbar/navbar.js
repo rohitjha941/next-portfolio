@@ -1,3 +1,4 @@
+'use client';
 
 import Link from "next/link";
 import styles from './header.module.scss';
@@ -6,31 +7,64 @@ import { LinkedIn, Email, GitHub } from '@/constants';
 import { UilEnvelope, UilLinkedin, UilGithub } from '@iconscout/react-unicons';
 
 function Navbar() {
+  const scrollToSection = (e, sectionId) => {
+    e.preventDefault();
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <div className={styles.nav}>
-      <span className="nav_brand">
+    <header className={styles.nav}>
+      <nav>
         <Link
           href="/"
           className={styles.nav_brand}
+          aria-label="Home"
         >
           Rohit Jha
         </Link>
-      </span>
-      <span className={styles.nav_array}>
-        <Link
-          href="/about"
-          className={styles.nav_items}
-        >
-          About
-        </Link>
+        
+        <div className={styles.nav_array}>
+          <a
+            href="#about"
+            className={styles.nav_items}
+            onClick={(e) => scrollToSection(e, 'about')}
+          >
+            About
+          </a>
 
-        <span className={styles.nav_items}>
-          <Link className={styles.nav_icons} href={`mailto:${Email}`}><UilEnvelope size="27.5" color="#A7A7A7" /></Link>
-          <Link className={styles.nav_icons} href={LinkedIn}><UilLinkedin size="27.5" color="#A7A7A7" /></Link>
-          <Link className={styles.nav_icons} href={GitHub}><UilGithub size="27.5" color="#A7A7A7" /></Link>
-        </span>
-      </span>
-    </ div >
+          <div className={styles.nav_items}>
+            <Link 
+              className={styles.nav_icons} 
+              href={`mailto:${Email}`}
+              aria-label="Email me"
+            >
+              <UilEnvelope size="27.5" aria-hidden="true" />
+            </Link>
+            <Link 
+              className={styles.nav_icons} 
+              href={LinkedIn}
+              aria-label="Visit my LinkedIn profile"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <UilLinkedin size="27.5" aria-hidden="true" />
+            </Link>
+            <Link 
+              className={styles.nav_icons} 
+              href={GitHub}
+              aria-label="Visit my GitHub profile"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <UilGithub size="27.5" aria-hidden="true" />
+            </Link>
+          </div>
+        </div>
+      </nav>
+    </header>
   );
 }
 

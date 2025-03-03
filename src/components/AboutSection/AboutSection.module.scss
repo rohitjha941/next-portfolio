@@ -1,0 +1,107 @@
+@import "../../styles/common/index";
+
+.about_section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 max(1.5rem, calc($leftRightPadding + 2%));
+    position: relative;
+    animation: fadeIn 1s ease-out;
+    
+    @media (max-width: 768px) {
+        padding: 0 1rem;
+        margin: 2rem auto;
+    }
+}
+
+.section_header {
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 0.5rem;
+}
+
+.about_container {
+    margin-top: 2.5rem;
+    animation: fadeInUp 0.8s ease-out;
+    width: 100%;
+}
+
+.about_content {
+    color: $white;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    width: 100%;
+
+    p {
+        opacity: 0.9;
+        width: 100%;
+        margin: 0;
+        
+        &:first-child {
+            font-size: 1.4rem;
+            font-weight: 500;
+            background: linear-gradient(90deg, $white, rgba(255, 255, 255, 0.8));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    @media (max-width: 768px) {
+        font-size: 1.1rem;
+        gap: 1rem;
+        
+        p:first-child {
+            font-size: 1.25rem;
+        }
+    }
+}
+
+.interests_list {
+    list-style: none;
+    padding-left: 1.5rem;
+    margin: 0.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+
+    li {
+        position: relative;
+        opacity: 0.9;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: -1.5rem;
+            top: 0.5rem;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+        }
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+} 

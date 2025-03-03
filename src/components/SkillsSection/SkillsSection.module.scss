@@ -1,0 +1,81 @@
+@import "../../styles/common/index";
+
+.skills_section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 4rem auto 2rem;
+    padding: 0 max(1.5rem, calc($leftRightPadding + 2%));
+    position: relative;
+    animation: fadeIn 1s ease-out;
+    
+    @media (max-width: 768px) {
+        padding: 0 1rem;
+        margin: 3rem auto 1.5rem;
+    }
+}
+
+.skills_container {
+    margin-top: 1.5rem;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.skills_wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.skills_category {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    transition: transform var(--transition-speed) ease;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 6px;
+    border-left: 2px solid transparent;
+
+    &:hover {
+        transform: translateX(5px);
+        background: rgba(255, 255, 255, 0.04);
+        border-left-color: $primaryColor;
+    }
+}
+
+.category_label {
+    color: $primaryColor;
+    font-size: 1.1rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.skills_list {
+    color: $white;
+    opacity: 0.9;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+} 
