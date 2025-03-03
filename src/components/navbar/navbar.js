@@ -1,7 +1,7 @@
 'use client';
 
 import Link from "next/link";
-import styles from './header.module.scss';
+import styles from './navbar.module.scss';
 
 import { LinkedIn, Email, GitHub } from '@/constants';
 import { UilEnvelope, UilLinkedin, UilGithub } from '@iconscout/react-unicons';
@@ -17,7 +17,7 @@ function Navbar() {
 
   return (
     <header className={styles.nav}>
-      <nav>
+      <div className={styles.nav_container}>
         <Link
           href="/"
           className={styles.nav_brand}
@@ -63,7 +63,7 @@ function Navbar() {
             </Link>
           </div>
         </div>
-      </nav>
+      </div>
     </header>
   );
 }
