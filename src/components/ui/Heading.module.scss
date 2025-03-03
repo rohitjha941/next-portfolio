@@ -6,10 +6,11 @@
     color: $white;
     margin-bottom: 1.5rem;
     padding-bottom: 0.5rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid $borderColor;
     background: var(--gradient-primary);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    display: inline-block;
+    display: block;
+    width: 100%;
 } 

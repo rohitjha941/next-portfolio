@@ -3,8 +3,16 @@
 @import "./common/accessibility";
 
 :root {
-  --gradient-primary: linear-gradient(90deg, #13b0f5 -2.06%, #e70faa 100%);
-  --transition-speed: 0.3s;
+  --gradient-primary: #{$primaryGradient};
+  --transition-speed: #{$transitionSpeed};
+  --background-color: #{$backgroundColor};
+  --background-color-2: #{$backgroundColor2};
+  --primary-color: #{$primaryColor};
+  --white: #{$white};
+  --gray: #{$gray};
+  --border-color: #{$borderColor};
+  --overlay-light: #{$overlayLight};
+  --overlay-medium: #{$overlayMedium};
 }
 
 html {

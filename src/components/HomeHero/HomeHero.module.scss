@@ -3,7 +3,7 @@
 .home {
     display: flex;
     align-items: center;
-    color: #ffffff;
+    color: $white;
 }
 
 .home_container {
@@ -22,7 +22,7 @@
 }
 
 .home_name {
-    color: #ffffff;
+    color: $white;
     font-size: clamp(2rem, 5vw, 3.2rem);
     font-weight: 700;
     line-height: 1.2;
@@ -30,7 +30,7 @@
 }
 
 .name {
-    color: #ffffff;
+    color: $white;
     font-size: clamp(2rem, 5vw, 3.2rem);
     font-weight: 700;
     line-height: 1.2;
@@ -38,7 +38,7 @@
 
 .tagline {
     font-size: clamp(1.2rem, 3vw, 1.4rem);
-    color: #ffffff;
+    color: $white;
     font-weight: 500;
     opacity: 0.95;
 }
