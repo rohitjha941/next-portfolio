@@ -21,12 +21,16 @@ html {
 
 html,
 body {
-  font-size: 0.83vw;
+  font-size: 16px;
   margin: 0;
   padding: 0;
 
-  @media (max-width: 768px) {
-    font-size: 16px;
+  @media (min-width: 768px) {
+    font-size: calc(14px + 0.5vw);
+  }
+
+  @media (min-width: 1200px) {
+    font-size: calc(16px + 0.5vw);
   }
 }
 
