@@ -3,8 +3,16 @@
 @import "./common/accessibility";
 
 :root {
-  --gradient-primary: linear-gradient(90deg, #13b0f5 -2.06%, #e70faa 100%);
-  --transition-speed: 0.3s;
+  --gradient-primary: #{$primaryGradient};
+  --transition-speed: #{$transitionSpeed};
+  --background-color: #{$backgroundColor};
+  --background-color-2: #{$backgroundColor2};
+  --primary-color: #{$primaryColor};
+  --white: #{$white};
+  --gray: #{$gray};
+  --border-color: #{$borderColor};
+  --overlay-light: #{$overlayLight};
+  --overlay-medium: #{$overlayMedium};
 }
 
 html {
@@ -13,12 +21,16 @@ html {
 
 html,
 body {
-  font-size: 0.83vw;
+  font-size: 16px;
   margin: 0;
   padding: 0;
 
-  @media (max-width: 768px) {
-    font-size: 16px;
+  @media (min-width: 768px) {
+    font-size: calc(14px + 0.5vw);
+  }
+
+  @media (min-width: 1200px) {
+    font-size: calc(16px + 0.5vw);
   }
 }
 

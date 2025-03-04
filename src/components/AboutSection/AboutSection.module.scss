@@ -1,7 +1,7 @@
 @import "../../styles/common/index";
 
 .about_section {
-    color: #ffffff;
+    color: $white;
 }
 
 .about_container {
@@ -13,6 +13,8 @@
         margin-bottom: 1.5rem;
         line-height: 1.6;
         font-size: 1.1rem;
+        color: $white;
+        
         opacity: 0.9;
         
         &:last-child {

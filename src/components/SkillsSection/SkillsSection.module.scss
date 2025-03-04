@@ -1,7 +1,7 @@
 @import "../../styles/common/index";
 
 .skills_section {
-    color: #ffffff;
+    color: $white;
 }
 
 .skills_container {
@@ -18,21 +18,21 @@
 }
 
 .skill_category {
-    background: rgba(255, 255, 255, 0.05);
+    background: $overlayLight;
     padding: 1.2rem;
     border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.3s ease;
+    border: 1px solid $borderColor;
+    transition: all $transitionSpeed ease;
     margin-bottom: 1.5rem;
 
     &:hover {
-        background: rgba(255, 255, 255, 0.08);
+        background: $overlayMedium;
     }
 }
 
 .category_title {
     font-size: 1.1rem;
-    color: #ffffff;
+    color: $white;
     margin-bottom: 1rem;
     font-weight: 600;
     position: relative;
@@ -45,7 +45,7 @@
         left: 0;
         width: 40px;
         height: 2px;
-        background: linear-gradient(45deg, #00ff87, #60efff);
+        background: $primaryGradient;
         border-radius: 2px;
     }
 }
@@ -57,19 +57,19 @@
 }
 
 .skill_item {
-    background: rgba(255, 255, 255, 0.05);
+    background: $overlayLight;
     padding: 0.4rem 0.6rem;
     border-radius: 4px;
     font-size: 0.85rem;
-    color: #ffffff;
-    transition: all 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: $white;
+    transition: all $transitionSpeed ease;
+    border: 1px solid $borderColor;
     cursor: pointer;
     position: relative;
 
     &:hover {
         border-color: transparent;
-        background: rgba(255, 255, 255, 0.05);
+        background: $overlayLight;
         
         &::before {
             content: '';
@@ -77,7 +77,7 @@
             inset: -1px;
             border-radius: 4px;
             padding: 1px;
-            background: linear-gradient(45deg, #00ff87, #60efff);
+            background: $primaryGradient;
             -webkit-mask: 
                 linear-gradient(#fff 0 0) content-box, 
                 linear-gradient(#fff 0 0);
@@ -94,25 +94,5 @@
     .skill_item {
         padding: 0.3rem 0.5rem;
         font-size: 0.8rem;
-    }
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
     }
 } 

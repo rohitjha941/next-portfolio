@@ -2,9 +2,8 @@
 
 import Link from "next/link";
 import styles from './navbar.module.scss';
-
 import { LinkedIn, Email, GitHub } from '@/constants';
-import { UilEnvelope, UilLinkedin, UilGithub } from '@iconscout/react-unicons';
+import { IconEnvelope, IconLinkedin, IconGithub } from '@/components/icons';
 
 function Navbar() {
   const scrollToSection = (e, sectionId) => {
@@ -41,7 +40,7 @@ function Navbar() {
               href={`mailto:${Email}`}
               aria-label="Email me"
             >
-              <UilEnvelope size={27.5} color="currentColor" aria-hidden="true" />
+              <IconEnvelope size={27.5} aria-hidden="true" />
             </Link>
             <Link 
               className={styles.nav_icons} 
@@ -50,7 +49,7 @@ function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <UilLinkedin size={27.5} color="currentColor" aria-hidden="true" />
+              <IconLinkedin size={27.5} aria-hidden="true" />
             </Link>
             <Link 
               className={styles.nav_icons} 
@@ -59,7 +58,7 @@ function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <UilGithub size={27.5} color="currentColor" aria-hidden="true" />
+              <IconGithub size={27.5} aria-hidden="true" />
             </Link>
           </div>
         </div>

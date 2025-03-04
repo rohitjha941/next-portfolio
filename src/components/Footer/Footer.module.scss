@@ -1,8 +1,8 @@
 @import "../../styles/common/index";
 
 .footer {
-    background: rgba(26, 26, 26, 0.95);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background: $backgroundColor2;
+    border-top: 1px solid $borderColor;
     margin-top: 5%;
 }
 
@@ -16,7 +16,7 @@
 }
 
 .copyright {
-    color: #ffffff;
+    color: $white;
     opacity: 0.8;
     font-size: 0.9rem;
 }
@@ -27,13 +27,13 @@
 }
 
 .social_icon {
-    color: #ffffff;
+    color: $white;
     opacity: 0.8;
-    transition: all 0.3s ease;
+    transition: all $transitionSpeed ease;
 
     &:hover {
         opacity: 1;
-        color: #00ff87;
+        color: $primaryColor;
         transform: translateY(-2px);
     }
 }
