@@ -15,6 +15,14 @@ export const metadata = {
     title: 'Rohit Jha',
     description: 'Full Stack Developer specializing in scalable web applications',
   },
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+  },
+  themeColor: [
+    { media: '(prefers-color-scheme: dark)', color: '#000000' },
+  ],
+  colorScheme: 'dark',
 };
 
 export default function RootLayout({ children }) {
